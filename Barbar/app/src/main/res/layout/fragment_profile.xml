@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color"
+        tools:context=".fragments.ProfileFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_10sdp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:id="@+id/layout_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    >
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/barbar_imagevew"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:src="@drawable/no_image"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/barbar_name_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/barbar_imagevew"
+                        android:text="Name"
+                        android:textColor="@color/black"
+                        android:layout_alignTop="@id/barbar_imagevew"
+                        android:textStyle="bold"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:textSize="@dimen/_16ssp"
+                        android:maxLines="1"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        />
+                </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/des_cardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_1"
+                    android:layout_alignStart="@id/layout_1"
+                    android:layout_alignEnd="@id/layout_1"
+
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/_8sdp"
+                    app:cardElevation="@dimen/_4sdp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="@dimen/_5sdp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="About Me"
+                            android:textSize="@dimen/_16ssp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:padding="@dimen/_5sdp"
+                            />
+
+                        <TextView
+                            android:id="@+id/des_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Desc"
+                            android:textSize="@dimen/_14ssp"
+                            android:textColor="@color/black"
+                            android:paddingStart="@dimen/_5sdp"
+                            android:maxLines="3"
+                            />
+
+
+                    </LinearLayout>
+
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/address_cardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/des_cardview"
+                    android:layout_alignStart="@id/des_cardview"
+                    android:layout_alignEnd="@id/des_cardview"
+
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/_8sdp"
+                    app:cardElevation="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="@dimen/_5sdp"
+                        >
+
+                        <TextView
+                            android:id="@+id/address_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Address"
+                            android:textSize="@dimen/_14ssp"
+                            android:textColor="@color/black"
+                            android:padding="@dimen/_5sdp"
+                            android:maxLines="3"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableStart="@drawable/ic_baseline_home_24"
+                            android:drawableTint="@color/purple_700"
+                            />
+
+
+                    </LinearLayout>
+
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/photos_cardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/address_cardview"
+                    android:layout_alignStart="@id/address_cardview"
+                    android:layout_alignEnd="@id/address_cardview"
+
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/_8sdp"
+                    app:cardElevation="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="@dimen/_5sdp"
+                        >
+
+                      <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Photos"
+                            android:textSize="@dimen/_16ssp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:padding="@dimen/_5sdp"
+                            />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/images_recyclerview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            />
+
+
+                    </LinearLayout>
+
+
+
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+
+
+
+    </RelativeLayout>
+</layout>

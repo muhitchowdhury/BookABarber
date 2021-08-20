@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1033540435602",
+    "project_id": "barber-a2099",
+    "storage_bucket": "barber-a2099.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033540435602:android:382c5e69bfa704230ef04b",
+        "android_client_info": {
+          "package_name": "com.codecoy.barbar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1033540435602-m03rckou0v72ohjar93g51o156mhsv6g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIPxQtu_hHJUrAUGV93Y-5UGjoGI8xOmY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1033540435602-m03rckou0v72ohjar93g51o156mhsv6g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

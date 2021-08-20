@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1"
+
+        tools:context=".commondata.activities.SignUp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".35"
+            android:background="@drawable/custom_shape"
+            >
+
+            <ImageView
+                android:id="@+id/current_location_imageview"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="end"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:tint="@color/white"
+                android:src="@drawable/ic_baseline_location_on_24"
+                />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profilePicture"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_launcher"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp" />
+
+            <TextView
+                android:id="@+id/resulttv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:text="@string/registration"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20ssp"
+                />
+        </FrameLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight=".65"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+                <RelativeLayout
+                    android:id="@+id/scrolrelative"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/enterFirstNameLayout"
+                        style="@style/OutlinedRoundedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+
+                        app:startIconDrawable="@drawable/ic_baseline_person_outline_24">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/enterFirstName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/first_name"
+                            android:inputType="textEmailAddress" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/enterLastNameLayout"
+                        style="@style/OutlinedRoundedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/enterFirstNameLayout"
+                        android:layout_margin="5dp"
+                        app:startIconDrawable="@drawable/ic_baseline_person_outline_24">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/enterLastName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/last_name"
+                            android:inputType="textEmailAddress" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/enterEmaillayout"
+                        style="@style/OutlinedRoundedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/enterLastNameLayout"
+                        android:layout_margin="5dp"
+                        app:startIconDrawable="@drawable/ic_baseline_email_24">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/entereEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Email"
+                            android:inputType="textEmailAddress" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/enterPasswordlayout"
+                        style="@style/OutlinedRoundedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/enterEmaillayout"
+                        android:layout_margin="5dp"
+
+                        app:startIconDrawable="@drawable/ic_baseline_lock_24">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/enterePassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Password"
+                            android:inputType="text" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/enterPhonelaout"
+                        style="@style/OutlinedRoundedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/enterPasswordlayout"
+                        android:layout_margin="5dp"
+                        app:startIconDrawable="@drawable/ic_baseline_phone_android_24">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/enterPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/mobile_no"
+                            android:inputType="number" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/enterAddresslayout"
+                        style="@style/OutlinedRoundedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/enterPhonelaout"
+                        android:layout_margin="5dp"
+                        android:hint="@string/address"
+                        app:startIconDrawable="@drawable/ic_baseline_location_on_24">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/enterCountry"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textPostalAddress"
+                        android:focusable="false"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                </RelativeLayout>
+
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/Signupaccount"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/scrolrelative"
+                    android:text="@string/register"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    app:cornerRadius="30dp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    app:backgroundTint="@color/white"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/black"
+
+                    />
+
+                <TextView
+                    android:id="@+id/already_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="@dimen/_10sdp"
+                    android:layout_below="@id/Signupaccount"
+                    android:layout_centerHorizontal="true"
+                    android:text="Already have an account, Login here"
+                    />
+
+            </RelativeLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</layout>
+

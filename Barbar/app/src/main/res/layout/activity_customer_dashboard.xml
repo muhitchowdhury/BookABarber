@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:background="#CFCFCF"
+        tools:context=".activities.CustomerDashboardActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".4"
+            android:background="@drawable/custom_shape_two_rounded"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/barber_imageview"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:src="@mipmap/ic_launcher"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp" />
+
+            <TextView
+                android:id="@+id/barber_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:gravity="center_vertical"
+                android:textColor="@color/white"
+                android:layout_below="@id/barber_imageview"
+                android:layout_centerHorizontal="true"
+                android:padding="@dimen/_15sdp"
+                android:layout_alignParentBottom="true"
+
+                android:textSize="@dimen/_20ssp"
+                />
+            <TextView
+                android:id="@+id/edit_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit"
+                android:textColor="@color/white"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:padding="@dimen/_15sdp"
+                android:textSize="@dimen/_20ssp"
+                />
+
+            <TextView
+                android:id="@+id/logout_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:textColor="@color/white"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:padding="@dimen/_15sdp"
+                android:textSize="@dimen/_20ssp"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".6">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/barber_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_centerInParent="true"
+                app:cornerRadius="@dimen/_30sdp"
+                android:text="Barbers"
+                android:textAllCaps="false"
+                android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>
